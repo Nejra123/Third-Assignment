@@ -1,0 +1,325 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #1e0002;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+.nav-link {
+    font-size: 23px;
+}
+.navbar-brand {
+    font-size: 23px;
+    text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+h1 {
+    font-size: 32px;
+    margin: 20px 0;
+    text-align: center;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.product {
+    flex: 20%;
+    background: aliceblue;
+    color: #400002;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+.product:hover {
+    transform: scale(1.05);
+}
+.product img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.productinfo {
+    padding: 15px;
+}
+.productinfo h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.productinfo p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+footer {
+    margin-top: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #331b1b;
+    height: 80px;
+    text-align: center;
+    justify-content: center;
+}
+footer h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    width: 100%; 
+    height: 100%; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.modal-content {
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    
+}
+
+.modalImage {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    
+}
+
+#btnhistory{
+
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 3px;
+}
+#navitheme{
+
+display: flex;
+flex-wrap: wrap;
+gap:53%;
+
+}
+
+
+#lightmodebtn{
+font-size: 15px;
+width: 170px;
+height: 80px;
+background: none; 
+border: none; 
+height: auto;
+}
+
+#sun{
+
+width: 80px;
+height: 70px;
+}
+
+.lightmode {
+background-color: aliceblue;
+color: #1e0002;
+
+}
+.lightmode a{
+
+color: #1e0002;
+}
+.lightmode nav a:hover{
+color: rgb(197, 185, 185);
+}
+
+.lightmode .nav-link.active{
+color: rgb(238, 40, 40);
+
+}
+.lightmode footer, .lightmode .navbar-toggler{
+
+background-color: rgb(179, 178, 178);
+
+}
+.lightmode .product{
+background-color:  rgb(228, 225, 225);
+}
+.accordion {
+background-color: aliceblue;
+color: #444;
+cursor: pointer;
+padding: 18px;
+width: 100%;
+text-align: left;
+border: none;
+outline: none;
+transition: 0.4s;
+
+
+}
+
+
+.isactive, .accordion:hover {
+background-color: #ccc;
+}
+
+#accdiv{
+
+width: 400px;
+align-items: center;
+
+
+
+}
+#velikidiv {
+display: flex;
+justify-content: center;  
+align-items: center;  
+gap: 20px;  
+
+
+
+}
+
+.accsection {
+
+color: #1e0002;
+background-color: aliceblue;
+display: none;
+
+
+}
+
+.lightmode .accordion{
+background-color: rgb(228, 225, 225);
+
+}
+.lightmode .accsection{
+
+background-color:rgb(241, 238, 238);
+}
+#containerpr{
+background-color: aliceblue;
+border-radius: 8px;
+padding: 20px;
+}
+.lightmode #containerpr{
+background-color:rgb(228, 225, 225);
+
+}
+
+#containerpr h3 {
+text-align: center;
+color: #1e0002;
+}
+
+#containerpr table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+#containerpr th, td {
+padding: 10px;
+text-align: center;
+}
+
+#containerpr th {
+
+background-color: #1e0002;
+color: aliceblue;
+}
+
+#containerpr td {
+background-color: aliceblue;
+color: #1e0002;
+}
+
+#containerpr button {
+padding: 5px 10px;
+border: none;
+background-color:#1e0002;
+color: aliceblue;
+cursor: pointer;
+border-radius: 4px;
+transition: background-color 0.3s;
+}
+
+#containerpr button:hover {
+background-color:#400002;
+}
+
+#success{
+background-color: rgb(61, 54, 54);
+text-align: center;
+
+}  
+
+
+@media (max-width: 700px) {
+#velikidiv{
+
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-bottom: 10px;
+
+}
+#accdiv{
+    margin-left: 0px;
+}
+#containerpr{
+
+    margin-right: 0px;
+    
+}
+
+
+}
+@media (max-width: 500px) {
+    .product {
+        flex: 100%; 
+        max-width: 100%;
+    }
+    #velikidiv{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+        }
+        #accdiv{
+    margin-left: 0px;
+}
+#containerpr{
+
+    margin-right: 0px;
+}
+            }   

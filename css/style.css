@@ -1,0 +1,574 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #1e0002;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    
+}
+
+/*nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    align-items: center;
+    margin-left: 10px;
+}
+*/
+.nav-link {
+    font-size: 23px;
+}
+.navbar-brand{
+    font-size: 23px;
+    text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+/*nav a:hover {
+    color: #ff4e51;
+}*/
+
+p {
+    color: aliceblue;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 40px;
+}
+
+.kontaktforma {
+    background: aliceblue;
+    color: #400002;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+   
+}
+
+
+.kontaktforma h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.kontaktforma label {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.kontaktforma input, .kontaktforma select {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #400002;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.kontaktforma textarea {
+    height: 100px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.kontaktforma button {
+    background-color: #400002;
+    color: aliceblue;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn {
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s; 
+    
+}
+
+
+.btn:hover, .btn:focus {
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #400002;
+   
+
+    
+}
+
+.btn:active {
+    transform: translateY(-1px); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.rightcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.rightcontainer h1{
+
+    font-size: 32px;
+}
+
+.rightcontainer section {
+    background: aliceblue;
+    color: #400002;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+}
+
+.media p, a {
+    color: #400002;
+}
+
+#insta {
+    color: #400002;
+}
+
+
+.customersat button{
+
+    background-color: #400002;
+    color: aliceblue;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 59px;
+    margin-bottom: 7px; 
+    width: 60%;
+
+}
+
+.products button {
+
+    background-color: #400002;
+    color: aliceblue;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 59px;
+    margin-bottom: 7px;
+    width: 60%;
+
+} 
+
+.col-lg-8 p{
+
+    
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h2{
+
+    font-size: 30px;
+    text-transform: uppercase;
+
+}
+ legend{
+
+    font-size: 20px;
+
+ }
+/*.aboutuscontainer {
+    display: flex;
+    flex-direction: row;
+   
+}
+
+
+.aboutus {
+    width: 40%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.aboutus h1 {
+    font-size: 40px;
+}
+
+.aboutus p {
+    word-spacing: 5px;
+    font-size: 24px;
+}
+
+.aboutus h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+table {
+    margin: auto;
+    height: 40%;
+    width: 40%;
+    border: 2px solid aliceblue;
+    border-radius: 20px;
+    
+}
+
+th, td {
+    border: 1px solid aliceblue;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}
+.images {
+    margin-left: 10%;
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+*/
+
+.fade.show {
+    opacity: 0; 
+    transform: scale(0.8); 
+    animation: popIn 0.5s ease-out forwards;
+    animation-delay: 0.5s; 
+  }
+  
+ 
+  @keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.1); 
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1); 
+      }
+  }
+  
+  
+table.table-hover tr:hover{
+
+    background-color:  rgb(68, 10, 10);
+    color: aliceblue;
+    
+}
+
+table.table-hover th:hover{
+
+    color: aliceblue;
+}
+.table  {
+    font-size: 20px; 
+    color: aliceblue;
+}
+hr {
+    margin-top: 10px;
+}
+
+#navitheme{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap:55%
+    
+    }
+    
+    
+    #lightmodebtn{
+        
+        height: 80px;
+        background: none; 
+        border: none; 
+       
+    }
+    
+    #sun{
+    
+        width: 80px;
+        height: 70px;
+    }
+    
+    .lightmode {
+        background-color: aliceblue;
+        color: #1e0002;
+        
+      }
+     .lightmode a{
+    
+        color: #1e0002;
+     }
+     .lightmode nav a:hover{
+        color: rgb(197, 185, 185);
+    }
+    
+    .lightmode .nav-link.active{
+        color: rgb(238, 40, 40);
+    
+    }
+    .lightmode footer, .lightmode .navbar-toggler{
+
+        background-color: rgb(179, 178, 178);
+    
+      }
+      
+      .lightmode footer p{
+
+        color: #1e0002;
+      }
+    
+
+       .lightmode .kontaktforma {
+
+        background-color: rgb(228, 225, 225);
+
+       }
+       .lightmode .rightcontainer section{
+
+        background-color: rgb(228, 225, 225);
+       }
+
+       .lightmode .container-fluid p{
+
+color: #1e0002;
+
+       }
+
+       .lightmode table {
+        font-size: 20px;
+        color: #1e0002; 
+    }
+    
+    .lightmode table th {
+        color: #1e0002; 
+        
+    }
+    
+    .lightmode table .table-hover tr:hover {
+        background-color: rgb(221, 4, 4); 
+        color: #030000; 
+    }
+    
+    .valid {
+        color: green;
+    }
+
+    .valid:before {
+        
+        left: -35px;
+        content: "\2705"; ;
+    }
+
+    .invalid {
+        color: rgb(177, 29, 29);
+    }
+
+    .invalid:before {
+       
+        left: -35px;
+        content: "\274C";
+    }
+  
+    #snackbar {
+        visibility: hidden; 
+        min-width: 250px; 
+        margin-left: -125px; 
+        background-color: #333; 
+        color: #fff; 
+        text-align: center; 
+        border-radius: 2px; 
+        padding: 16px;
+        position: fixed; 
+        left: 50%; 
+        bottom: 30px; 
+      }
+      
+  
+      #snackbar.show {
+        visibility: visible; 
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      }
+      
+      @keyframes fadein {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+      }
+      
+
+      @keyframes fadeout {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+      }
+
+     
+@media screen and (max-width: 950px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        gap: 20px;
+    }
+    .kontaktforma,
+    .rightcontainer,
+    .products {
+        width: 90%;
+        max-width: 400px;
+        margin: 10px;
+       
+    }
+    #img1{
+
+        height: 400px;
+        width: 400px;
+
+    }
+    nav a{
+
+        font-size: 15px;
+        
+        }
+}
+  /* .aboutus h1{
+
+        font-size: 30px;
+            
+             }
+    .aboutus p{
+            
+            word-spacing: 5PX;
+            font-size: 15px;
+            }
+            
+    .aboutus h2{
+            
+            font-size: 20px;
+            text-transform: uppercase;
+
+            }
+
+        table {
+        width: 20%; 
+            }
+        
+        th, td {
+            font-size: 2px; 
+            padding: 1px; 
+            }*/
+        
+
+
+@media screen and (max-width: 550px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 15px;
+    }
+    .kontaktforma,
+    .rightcontainer,
+    .products {
+        width: 100%;
+        margin: 5px 0;
+        padding: 15px;
+    }
+    nav {
+        display: flex;
+        flex-direction: column}
+    #img1{
+
+        height: 200px;
+        width: 200px;
+
+    }
+    nav a{
+
+        font-size: 15px;
+        
+        }
+    
+       /* .aboutus h1{
+
+            font-size: 20px;
+            
+             }
+             .aboutus p{
+            
+                word-spacing: 5PX;
+                font-size: 13px;
+             }
+            
+             .aboutus h2{
+            
+                font-size: 10px;
+                text-transform: uppercase;
+
+             }
+
+             table {
+                width: 20%; 
+            }
+        
+            th, td {
+                font-size: 0.6em; 
+                padding: 1px; 
+            }*/
+
+        }
+
+          
+footer{
+    
+    margin-top: auto;
+    width:auto;
+    display:flex;
+    margin-bottom: 0;
+    flex-direction:column;
+    background-color:#331b1b;
+    height: 80px;
+    text-align: center;
+    justify-content: center;
+    
+    
+    
+    }
+    footer h3{
+
+       
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+    }
