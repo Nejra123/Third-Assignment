@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form {
+            display: none;
+        }
+
+        .form.active {
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #400002;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #8f050a;
+        }
+
+        .toggle-link {
+            text-align: center;
+            font-size: 14px;
+            color: #400002;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .toggle-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="signupForm" class="form active">
+            <h2>Sign Up</h2>
+            <input id="signupName" type="text" placeholder="Enter Name">
+            <input id="signupEmail" type="email" placeholder="Enter Email">
+            <input id="signupPassword" type="password" placeholder="Enter Password">
+            <button id="signupbtn">Sign Up</button>
+            <div class="toggle-link" onclick="showLogin()">Already have an account? Log in</div>
+        </div>
+
+        <div id="loginForm" class="form">
+            <h2>Log In</h2>
+            <input id="loginEmail" type="email" placeholder="Enter Email">
+            <input id="loginPassword" type="password" placeholder="Enter Password">
+            <button id="loginbtn">Log In</button>
+            <div class="toggle-link" onclick="showSignUp()">Don't have an account? Sign up</div>
+        </div>
+    </div>
+
+    <script>
+        let signupbtn = document.getElementById("signupbtn");
+        let loginbtn = document.getElementById("loginbtn");
+        let inputsignupname = document.getElementById("signupName");
+        let inputsignupemail = document.getElementById("signupEmail");
+        let inputsignuppass = document.getElementById("signupPassword");
+        let inputloginemail = document.getElementById("loginEmail");
+        let inputloginpass = document.getElementById("loginPassword");
+
+        let users = [];
+
+        if (localStorage.getItem("users") != null) {
+            users = JSON.parse(localStorage.getItem("users"));
+        }
+
+        function signUp() {
+            let user = {
+                name: inputsignupname.value,
+                email: inputsignupemail.value,
+                password: inputsignuppass.value,
+            };
+            
+            if (
+                inputsignupname.value === "" ||
+                inputsignupemail.value === "" ||
+                inputsignuppass.value === ""
+            ) {
+                alert("Fields cannot be empty");
+                return;
+            }
+
+            if (
+                realemail(inputsignupemail.value) &&
+                newemail(inputsignupemail.value)
+            ) {
+                users.push(user);
+                localStorage.setItem("users", JSON.stringify(users));
+                clearsignup();
+                alert("Sign up successful");
+                showLogin();
+            } else {
+                alert("Invalid email or email already in use");
+            }
+        }
+
+        function logIn() {
+            let email = inputloginemail.value;
+            let password = inputloginpass.value;
+
+            if (email === "" || password === "") {
+                alert("Fields cannot be empty");
+                return;
+            }
+
+            let user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                 alert(`Welcome back, ${user.name}!`);
+                localStorage.setItem("loggedInUser", JSON.stringify(user));
+                window.location.href = "../index.html"; 
+                    
+            } else {
+                alert("Incorrect email or password");
+            }
+        }
+        
+        function realemail(email) {
+            let emailver = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return emailver.test(email);
+        }
+
+        function newemail(email) {
+            for (let user of users) {
+                if (user.email === email) {
+                    return false; 
+                }
+            }
+                return true; 
+                }
+
+
+
+        function clearsignup() {
+            inputsignupname.value = "";
+            inputsignupemail.value = "";
+            inputsignuppass.value = "";
+        }
+
+        signupbtn.addEventListener("click", signUp);
+        loginbtn.addEventListener("click", logIn);
+
+        function showSignUp() {
+            document.getElementById("signupForm").classList.add("active");
+            document.getElementById("loginForm").classList.remove("active");
+        }
+
+        function showLogin() {
+            document.getElementById("loginForm").classList.add("active");
+            document.getElementById("signupForm").classList.remove("active");
+        }
+        
+    </script>
+</body>
+</html>

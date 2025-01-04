@@ -228,18 +228,24 @@ video {
   gap: 53%;
 }
 
-#lightmodebtn {
-  font-size: 15px;
-  width: 170px;
-  height: 80px;
-  background: none;
-  border: none;
-  height: auto;
-}
+/* #lightmodebtn{
+     font-size: 50px;
+     font-weight: bold;
 
-#sun {
-  width: 80px;
-  height: 70px;
+     width: 170px;
+     height: 80px;
+     height: auto;
+ }
+
+ #sun{
+
+     width: 80px;
+     height: 70px;
+ }*/
+#usernamep {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .lightmode {

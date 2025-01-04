@@ -48,9 +48,9 @@
         </div>
       </nav>
       
-      <button id="lightmodebtn">
-        <img id="sun" src=".\images\sun.png" alt="sun">
-      </button>
+      <p style="font-size: 18px;" id="usernamep">
+             
+      </p>
     </div>
     
     <hr>
@@ -153,6 +153,16 @@
         });
     
         app.run();
+
+        window.onload = function() {
+        const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    
+        document.getElementById("usernamep").innerHTML = "WELCOME, " +  (loggedInUser.name).toUpperCase(); 
+    
+    
+};
+
+       
     </script>
     
     <footer>

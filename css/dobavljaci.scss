@@ -300,12 +300,12 @@ footer{
             }
             
             
-            #lightmodebtn{
-                font-size: 15px;
+           /* #lightmodebtn{
+                font-size: 50px;
+                font-weight: bold;
+
                 width: 170px;
                 height: 80px;
-                background: none; 
-                border: none; 
                 height: auto;
             }
             
@@ -313,6 +313,11 @@ footer{
             
                 width: 80px;
                 height: 70px;
+            }*/
+            #usernamep{
+                margin-top: 20px;
+                font-size: 20px;
+                font-weight: bold;
             }
             
             .lightmode {
