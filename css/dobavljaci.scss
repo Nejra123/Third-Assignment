@@ -12,7 +12,7 @@ $footer:rgb(68, 10, 10);
     display: flex;
     align-items: center;
 }
-body{
+body.darkmode{
 
 background-color: $primrary;
 font-family: Arial, Helvetica, sans-serif;
@@ -24,7 +24,7 @@ min-height: 100vh;
 main {
     flex: 1; 
 }
-h1{
+.darkmode h1{
 color: $secondary;
 font-size: 50px;
 text-align: center;
@@ -300,20 +300,23 @@ footer{
             }
             
             
-           /* #lightmodebtn{
+           #lightmodebtn{
                 font-size: 50px;
                 font-weight: bold;
-
                 width: 170px;
                 height: 80px;
-                height: auto;
+                
+                 
+            height: 80px;
+            background: none; 
+            border: none; 
             }
             
             #sun{
             
                 width: 80px;
                 height: 70px;
-            }*/
+            }
             #usernamep{
                 margin-top: 20px;
                 font-size: 20px;

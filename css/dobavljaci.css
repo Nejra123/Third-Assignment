@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-body {
+body.darkmode {
   background-color: #1e0002;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
@@ -14,7 +14,7 @@ main {
   flex: 1;
 }
 
-h1 {
+.darkmode h1 {
   color: aliceblue;
   font-size: 50px;
   text-align: center;
@@ -228,20 +228,21 @@ video {
   gap: 53%;
 }
 
-/* #lightmodebtn{
-     font-size: 50px;
-     font-weight: bold;
+#lightmodebtn {
+  font-size: 50px;
+  font-weight: bold;
+  width: 170px;
+  height: 80px;
+  height: 80px;
+  background: none;
+  border: none;
+}
 
-     width: 170px;
-     height: 80px;
-     height: auto;
- }
+#sun {
+  width: 80px;
+  height: 70px;
+}
 
- #sun{
-
-     width: 80px;
-     height: 70px;
- }*/
 #usernamep {
   margin-top: 20px;
   font-size: 20px;
